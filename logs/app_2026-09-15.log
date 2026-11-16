@@ -1,0 +1,42 @@
+2026-09-15 15:20:31,997 [INFO] pipeline.build_pipeline: ============================================================
+2026-09-15 15:20:31,997 [INFO] pipeline.build_pipeline: Starting Anime Recommendation Vector Store Build Pipeline
+2026-09-15 15:20:31,997 [INFO] pipeline.build_pipeline: ============================================================
+2026-09-15 15:20:31,997 [INFO] src.data_loader: Loading raw anime data from: C:\Users\DELL\Desktop\anime recommandation system\data\anime_with_synopsis.csv
+2026-09-15 15:20:32,026 [INFO] src.data_loader: Saved processed data to: C:\Users\DELL\Desktop\anime recommandation system\data\anime_updated.csv
+2026-09-15 15:20:32,036 [INFO] src.data_loader: Successfully created 269 complete anime document chunks.
+2026-09-15 15:20:32,036 [INFO] pipeline.build_pipeline: Loaded 269 complete anime documents.
+2026-09-15 15:20:32,037 [INFO] src.vector_store: Initializing embeddings with model: sentence-transformers/all-MiniLM-L6-v2
+2026-09-15 15:20:41,312 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cpu
+2026-09-15 15:20:41,312 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-09-15 15:20:46,972 [INFO] src.vector_store: Indexing 269 anime documents into Chroma...
+2026-09-15 15:20:46,997 [INFO] chromadb.telemetry.product.posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-09-15 15:20:50,993 [INFO] src.vector_store: Chroma vector store built successfully with 269 records.
+2026-09-15 15:20:50,997 [INFO] pipeline.build_pipeline: Pipeline finished! Vector database ready at 'C:\Users\DELL\Desktop\anime recommandation system\chroma_db' with 269 documents.
+2026-09-15 15:21:23,523 [INFO] pipeline.pipeline: Initializing AnimeRecommendationPipeline...
+2026-09-15 15:21:23,530 [INFO] src.vector_store: Initializing embeddings with model: sentence-transformers/all-MiniLM-L6-v2
+2026-09-15 15:21:25,256 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cpu
+2026-09-15 15:21:25,256 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-09-15 15:21:33,647 [INFO] src.vector_store: Loading Chroma vector database from: C:\Users\DELL\Desktop\anime recommandation system\chroma_db
+2026-09-15 15:21:33,664 [INFO] chromadb.telemetry.product.posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-09-15 15:21:33,755 [INFO] src.recommender: Initializing AnimeRecommender with model: openai/gpt-oss-20b via groq
+2026-09-15 15:21:33,955 [INFO] pipeline.pipeline: AnimeRecommendationPipeline initialized successfully.
+2026-09-15 15:21:33,955 [INFO] src.recommender: Processing recommendation request: 'Suggest a great space western anime with high rating'
+2026-09-15 15:21:34,755 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-15 15:21:34,771 [INFO] src.recommender: Executing tool 'anime_retriever_tool' with args: {'query': 'space western anime'}
+2026-09-15 15:21:34,772 [INFO] src.recommender: anime_retriever_tool invoked with query: 'space western anime'
+2026-09-15 15:21:36,207 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-15 15:21:36,219 [INFO] src.recommender: Recommendation generated successfully.
+2026-09-15 15:23:50,501 [INFO] pipeline.pipeline: Initializing AnimeRecommendationPipeline...
+2026-09-15 15:23:50,504 [INFO] src.vector_store: Initializing embeddings with model: sentence-transformers/all-MiniLM-L6-v2
+2026-09-15 15:23:52,244 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cpu
+2026-09-15 15:23:52,244 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-09-15 15:23:58,168 [INFO] src.vector_store: Loading Chroma vector database from: C:\Users\DELL\Desktop\anime recommandation system\chroma_db
+2026-09-15 15:23:58,184 [INFO] chromadb.telemetry.product.posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-09-15 15:23:58,261 [INFO] src.recommender: Initializing AnimeRecommender with model: openai/gpt-oss-20b via groq
+2026-09-15 15:23:58,400 [INFO] pipeline.pipeline: AnimeRecommendationPipeline initialized successfully.
+2026-09-15 15:23:58,400 [INFO] src.recommender: Processing recommendation request: 'Suggest a great space western anime with high rating'
+2026-09-15 15:23:59,067 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-15 15:23:59,077 [INFO] src.recommender: Executing tool 'anime_retriever_tool' with args: {'query': 'space western anime high rating'}
+2026-09-15 15:23:59,078 [INFO] src.recommender: anime_retriever_tool invoked with query: 'space western anime high rating'
+2026-09-15 15:24:00,405 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-15 15:24:00,406 [INFO] src.recommender: Recommendation generated successfully.

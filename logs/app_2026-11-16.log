@@ -1,0 +1,36 @@
+2026-11-16 19:58:42,439 [INFO] pipeline.pipeline: Initializing AnimeRecommendationPipeline...
+2026-11-16 19:58:42,439 [INFO] src.vector_store: Initializing embeddings with model: sentence-transformers/all-MiniLM-L6-v2
+2026-11-16 19:58:55,068 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cpu
+2026-11-16 19:58:55,068 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-11-16 19:59:02,146 [INFO] src.vector_store: Loading Chroma vector database from: C:\Users\DELL\Desktop\anime recommandation system\chroma_db
+2026-11-16 19:59:02,210 [INFO] chromadb.telemetry.product.posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-11-16 19:59:02,630 [INFO] src.recommender: Initializing AnimeRecommender with model: openai/gpt-oss-20b via groq
+2026-11-16 19:59:03,206 [INFO] pipeline.pipeline: AnimeRecommendationPipeline initialized successfully.
+2026-11-16 19:59:43,313 [INFO] src.recommender: Processing recommendation request: 'naruto'
+2026-11-16 19:59:44,221 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-16 19:59:44,229 [INFO] src.recommender: Executing tool 'anime_retriever_tool' with args: {'query': 'anime similar to Naruto'}
+2026-11-16 19:59:44,229 [INFO] src.recommender: anime_retriever_tool invoked with query: 'anime similar to Naruto'
+2026-11-16 19:59:45,955 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-16 19:59:45,962 [INFO] src.recommender: Recommendation generated successfully.
+2026-11-16 20:02:52,447 [INFO] pipeline.pipeline: Initializing AnimeRecommendationPipeline...
+2026-11-16 20:02:52,448 [INFO] src.vector_store: Initializing embeddings with model: sentence-transformers/all-MiniLM-L6-v2
+2026-11-16 20:02:56,690 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cpu
+2026-11-16 20:02:56,690 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-11-16 20:03:03,554 [INFO] src.vector_store: Loading Chroma vector database from: C:\Users\DELL\Desktop\anime recommandation system\chroma_db
+2026-11-16 20:03:03,601 [INFO] chromadb.telemetry.product.posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-11-16 20:03:03,767 [INFO] src.recommender: Initializing AnimeRecommender with model: openai/gpt-oss-20b via groq
+2026-11-16 20:03:04,041 [INFO] pipeline.pipeline: AnimeRecommendationPipeline initialized successfully.
+2026-11-16 20:03:23,471 [INFO] pipeline.pipeline: Initializing AnimeRecommendationPipeline...
+2026-11-16 20:03:23,472 [INFO] src.vector_store: Initializing embeddings with model: sentence-transformers/all-MiniLM-L6-v2
+2026-11-16 20:03:27,050 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cpu
+2026-11-16 20:03:27,050 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-11-16 20:03:37,512 [INFO] src.vector_store: Loading Chroma vector database from: C:\Users\DELL\Desktop\anime recommandation system\chroma_db
+2026-11-16 20:03:37,543 [INFO] chromadb.telemetry.product.posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-11-16 20:03:37,622 [INFO] src.recommender: Initializing AnimeRecommender with model: openai/gpt-oss-20b via groq
+2026-11-16 20:03:37,866 [INFO] pipeline.pipeline: AnimeRecommendationPipeline initialized successfully.
+2026-11-16 20:03:37,866 [INFO] src.recommender: Processing recommendation request: 'comedy school anime'
+2026-11-16 20:03:39,462 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-16 20:03:39,472 [INFO] src.recommender: Executing tool 'anime_retriever_tool' with args: {'query': 'comedy school anime'}
+2026-11-16 20:03:39,473 [INFO] src.recommender: anime_retriever_tool invoked with query: 'comedy school anime'
+2026-11-16 20:03:41,640 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-16 20:03:41,642 [INFO] src.recommender: Recommendation generated successfully.
